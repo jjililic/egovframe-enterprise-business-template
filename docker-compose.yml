@@ -1,0 +1,16 @@
+version: '3.9'
+
+services:
+  db:
+    image: gvenzl/oracle-xe:11
+    environment:
+      - TZ=Asia/Seoul
+      - ORACLE_PASSWORD=inter1234
+    ports:
+      - 1521:1521
+    volumes:
+      - db:/u01/app/oraclea
+
+volumes:
+  db:
+    driver: local
