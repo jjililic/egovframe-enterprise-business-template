@@ -140,20 +140,21 @@
 			<version>2.0.8</version>
 		</dependency>
 
+		<!--
         <dependency>
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>
             <version>5.1.31</version>
         </dependency>
+        -->
 
 		<!-- oracle 10g driver -->
-		<!--
+		<!-- https://mvnrepository.com/artifact/com.oracle.database.jdbc/ojdbc6 -->
 		<dependency>
-			<groupId>ojdbc</groupId>
-			<artifactId>ojdbc</artifactId>
-			<version>14</version>
+		    <groupId>com.oracle.database.jdbc</groupId>
+		    <artifactId>ojdbc6</artifactId>
+		    <version>11.2.0.4</version>
 		</dependency>
-		-->
 
 		<!-- altibase driver -->
 		<!--
@@ -250,6 +251,11 @@
 						<encoding>UTF-8</encoding>
 						<maxmem>1024m</maxmem>
 					</configuration>
+				</plugin>
+				<plugin>
+				  <groupId>org.apache.maven.plugins</groupId>
+				  <artifactId>maven-war-plugin</artifactId>
+				  <version>3.3.2</version>
 				</plugin>
                 <plugin>
                     <groupId>org.codehaus.mojo</groupId>
